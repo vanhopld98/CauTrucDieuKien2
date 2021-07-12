@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy Tính</title>
+    <style>
+        th {
+            width: 50px;
+            height: 50px;
+        }
+        button {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<table border="1" style="border-collapse: collapse">
+    <tr>
+        <th colspan="4">
+            <div><p id="display" STYLE="color: blue"></p></div>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="getNumber('1')">1</button>
+        </th>
+        <th>
+            <button onclick="getNumber('2')">2</button>
+        </th>
+        <th>
+            <button onclick="getNumber('3')">3</button>
+        </th>
+        <th>
+            <button onclick="getNumber('+')">+</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="getNumber('4')">4</button>
+        </th>
+        <th>
+            <button onclick="getNumber('5')">5</button>
+        </th>
+        <th>
+            <button onclick="getNumber('6')">6</button>
+        </th>
+        <th>
+            <button onclick="getNumber('-')">-</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="getNumber('7')">7</button>
+        </th>
+        <th>
+            <button onclick="getNumber('8')">8</button>
+        </th>
+        <th>
+            <button onclick="getNumber('9')">9</button>
+        </th>
+        <th>
+            <button onclick="getNumber('*')">x</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button onclick="xoa()">C</button>
+        </th>
+        <th>
+            <button onclick="getNumber('0')">0</button>
+        </th>
+        <th>
+            <button onclick="ketqua()">=</button>
+        </th>
+        <th>
+            <button onclick="getNumber('/')">/</button>
+        </th>
+    </tr>
+</table>
+<script>
+    function getNumber(number) {
+        document.getElementById("display").innerHTML += number;
+    }
+    function ketqua(){
+        let ketqua
+        let x =document.getElementById("display").innerHTML
+        ketqua = eval(x)
+        document.getElementById("display").innerHTML =  ketqua;
+    }
+    function xoa(){
+        document.getElementById("display").innerHTML = '';
+    }
+</script>
+</body>
+</html>
