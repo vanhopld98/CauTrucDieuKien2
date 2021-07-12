@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày</title>
+</head>
+<body>
+<input type="number" id="1">
+<p id="2"></p>
+<button type="button" onclick="TSN()">Tính Số Ngày</button>
+<script>
+    function TSN(){
+        let a
+        a = document.getElementById('1').value
+        switch (a){
+            case '1':
+            case '3':
+            case '5':
+            case '7':
+            case '8':
+            case '10':
+            case '11':
+                document.getElementById('2').innerHTML='Tháng ' + a + ' có 31 ngày'
+                break;
+            case '2':
+                document.getElementById('2').innerHTML='Tháng 2 có 28 hoặc 29 ngày'
+                break;
+            case '4':
+            case '6':
+            case '9':
+            case '12':
+                document.getElementById('2').innerHTML='Tháng ' + a + ' có 30 ngày'
+                break;
+            default:
+                document.getElementById('2').innerHTML='Ơ Kìa , 1 năm chỉ có 12 tháng thôi mà =))'
+        }
+    }
+</script>
+</body>
+</html>
