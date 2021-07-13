@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me</title>
+</head>
+<body>
+<h1>Do You Love Me</h1>
+<button onclick="yes()">YES</button>
+<button style="position: relative;left: 50px" id="1" onmouseover="no()">NO</button>
+<script>
+function yes(){
+    alert('Yes . You are right')
+}
+function no (){
+    document.getElementById('1').style.left = Math.random(1,200)*100 + 'px'
+    document.getElementById('1').style.top = Math.random(1,200)*100 + 'px'
+}
+</script>
+</body>
+</html>
