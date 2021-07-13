@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<h3>Nhập Số Bất Kỳ:</h3>
+<input type="number" id="1">
+<button type="button" onclick="KT()">Xem Kết Quả</button>
+<script>
+  function KT(){
+    let a
+    a = document.getElementById('1').value
+    if (a < 0){
+      alert(a + ' Nhỏ hơn 0')
+    }else if (a == 0){
+      alert(a + ' Bằng 0')
+    }else {
+      alert(a + ' Lớn hơn 0')
+    }
+  }
+</script>
+</body>
+</html>

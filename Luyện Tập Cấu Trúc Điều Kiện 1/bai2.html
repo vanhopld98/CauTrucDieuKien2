@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h3>Xin Mời Nhập Tuổi:</h3>
+<input type="number" id="1">
+<button type="button" onclick="KT()">Xem Kết Quả</button>
+<script>
+  function KT(){
+    let a
+    a = parseInt(document.getElementById('1').value)
+    if (a > 18){
+      alert('Bạn đã quá tuổi học lớp 10')
+    }else if (a <= 18 && a >= 16){
+      alert('Bạn đủ điều kiện vào học lớp 10')
+    }else {
+      alert('Bạn chưa đủ tuổi vào học lớp 10')
+    }
+  }
+</script>
+</body>
+</html>

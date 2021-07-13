@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+Nhập a:<input type="number" id="a"><br>
+Nhập b:<input type="number" id="b"><br>
+<button type="button" onclick="KT()">Kiểm Tra</button>
+<script>
+  function KT(){
+    let a1
+    a1 = parseInt(document.getElementById('a').value);
+    let b1
+    b1 = parseInt(document.getElementById('b').value);
+    if (a1%b1 == 0){
+      alert(a1 + ' Chia Hết Cho ' + b1)
+    }else {
+      alert(a1 + ' Không Chia Hết Cho ' + b1)
+    }
+  }
+</script>
+</body>
+</html>

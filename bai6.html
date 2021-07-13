@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Ảnh</title>
 </head>
 <body>
-$END$
+<table>
+    <tr>
+        <td>
+            <img id="1" src="Ảnh Bài 5/nobita1.1.png" height="74" width="78.2" onclick="chuyenanh()"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img id="2" src="Ảnh Bài 5/nobita1.2.png" height="72.4" width="80.8" onclick="chuyenanh()"/>
+        </td>
+    </tr>
+</table>
+<script>
+    function chuyenanh(){
+        document.getElementById('1').src = "Ảnh Bài 5/doremon1.png"
+        document.getElementById('2').src = "Ảnh Bài 5/doremon2.png"
+    }
+</script>
 </body>
 </html>

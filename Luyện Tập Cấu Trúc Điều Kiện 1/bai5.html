@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+Nhập Điểm Thi Giữa Kỳ:<input type="number" id="1"><br>
+Nhập Điểm Thi Cuối Kỳ:<input type="number" id="2"><br>
+<button type="button" onclick="HL()">Xem Học Lực</button>
+<script>
+function HL(){
+  let a = parseInt(document.getElementById('1').value);
+  let b = parseInt(document.getElementById('2').value);
+  let c = (a+b)/2
+  if (c <= 5 && c > 0){
+    alert('Học Lực Của Bạn Là Trung Bình')
+  }else if (c<=8 && c > 5){
+    alert('Học Lực Của Bạn là Khá')
+  }else if (c<10 && c>8){
+    alert('Học Lực Của Bạn Là Giỏi')
+  }else if (c == 10){
+    alert('Học Lực Của Bạn Là Xuất Sắc')
+  }else {
+    alert('Bạn Nhập Sai Điểm')
+  }
+}
+</script>
+</body>
+</html>
