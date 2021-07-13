@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+Nhập a: <input type="number" id="1">
+Nhập b: <input type="number" id="2">
+Nhập c: <input type="number" id="3">
+<button type="button" onclick="timnghiem()">Tìm Nghiệm</button>
+<script>
+    function timnghiem(){
+        let a = document.getElementById('1').value
+        let b = document.getElementById('2').value
+        let c = document.getElementById('3').value
+        let denta = (b*b)-4*a*c
+        let candenta = Math.sqrt(denta)
+        if (a == 0){
+            alert('A phải khác 0')
+        }else if (denta < 0){
+            alert('Phương Trình Vô Nghiệm')
+        }else if (denta = 0){
+            alert('Phương Trình Có Nghiệm Kép x1 = x2 = ' +(-b/2*a))
+        }else {
+            alert('Phương Trình Có 2 Nghiệm Phân Biệt x1= '+ (-b+candenta)/2*a +' và x2='+ (-b-candenta)/2*a)
+        }
+    }
+</script>
+</body>
+</html>

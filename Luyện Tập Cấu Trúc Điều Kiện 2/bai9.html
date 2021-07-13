@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 9</title>
+</head>
+<body>
+Nhập a:<input type="number" id="1"><br>
+Nhập b:<input type="number" id="2"><br>
+Nhập c:<input type="number" id="3"><br>
+<button type="button" onclick="KT()">Kiểm Tra</button>
+<script>
+    function KT(){
+        let a = document.getElementById('1').value
+        let b = document.getElementById('2').value
+        let c = document.getElementById('3').value
+        if (a>0 && b>0 && c>0){
+            if (a+b>c)
+                if (b+c>a)
+                    if (a+c>b)
+                        alert(a+' ,'+b+' ,'+c+' Là 3 cạnh của 1 tam giác')
+        }else
+            alert(a+' ,'+b+' ,'+c+'Không là 3 cạnh của 1 tam giác')
+    }
+</script>
+</body>
+</html>

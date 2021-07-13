@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+nhập a: <input type="number" id="1"><br>
+nhập b: <input type="number" id="2"><br>
+nhập c: <input type="number" id="3"><br>
+<button type="button" onclick="nghiem()">TÍnh Nghiệm</button>
+<script>
+  function nghiem(){
+      let a = document.getElementById('1').value
+      let b = document.getElementById('2').value
+      let c = document.getElementById('3').value
+      let d = (c-b)/a
+      alert('X = '+d)
+  }
+</script>
+</body>
+</html>

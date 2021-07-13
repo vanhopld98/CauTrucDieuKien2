@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8</title>
+</head>
+<body>
+Nhập Tuổi:<input type="number" id="1">
+<button type="button" onclick="ketqua()">Xem Kết Quả</button>
+<script>
+  function ketqua(){
+    let a = document.getElementById('1').value
+    if (a==parseInt(document.getElementById('1').value) && a<=120 && a>0){
+      alert(a+'là tuổi của bạn')
+    }else{
+      alert('Tuổi phải là số nguyên và nhỏ hơn 120')
+    }
+  }
+</script>
+</body>
+</html>

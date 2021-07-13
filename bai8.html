@@ -14,16 +14,16 @@
     let checkfast = document.getElementById('2');
     let checkcheap = document.getElementById('3');
     if (a == 1){
-      if (checkgood.checked === true && checkfast.checked === true){
-        checkgood.checked === false
+      if (checkfast.checked && checkcheap.checked){
+        checkcheap.checked = false
       }
     }else if (a == 2){
-      if (checkfast.checked === true && checkcheap.checked === true){
-        checkcheap.checked === false
+      if (checkgood.checked && checkcheap.checked){
+        checkgood.checked = false
       }
     }else if (a == 3){
-      if (checkcheap.checked === true && checkgood.checked == true){
-        checkcheap.checked === false
+      if (checkfast.checked && checkgood.checked){
+        checkfast.checked = false
       }
     }
   }
