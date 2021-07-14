@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+Cạnh a:<input type="number" id="1"><br>
+Cạnh b:<input type="number" id="2"><br>
+<button type="button" onclick="S()">Tính Diện Tích</button>
+<p id="3"></p>
+<script>
+  function S(){
+    let a = document.getElementById('1').value
+    let b = document.getElementById('2').value
+    let S = (1/2)*(a*b)
+    document.getElementById('3').innerText = 'Diện tích tam giác là: '+S
+  }
+</script>
+</body>
+</html>

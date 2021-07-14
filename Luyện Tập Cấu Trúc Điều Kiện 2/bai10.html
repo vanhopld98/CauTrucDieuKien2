@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10</title>
+    <style>
+        th , td , tr{
+            height: 30px;
+        }
+        button{
+            height: 36px;
+        }
+        input{
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+<center>
+<table border="1" style="border-collapse: collapse">
+    <tr>
+        <th colspan="2">Nhập Số kWh Của Bạn</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="1"></td>
+        <td><button type="button" onclick="tiendien()">Tính Giá Tiền Điện Của Bạn</button></td>
+    </tr>
+    <tr>
+        <td colspan="2"><p></p><p id="2"></p></td>
+    </tr>
+    <tr>
+        <td colspan="2"><p></p><p id="3"></p></td>
+    </tr>
+    <tr>
+        <td colspan="2"><p style="color: red"></p><p id="4" style="color: red"></p></td>
+    </tr>
+</table>
+<script>
+  function tiendien(){
+    let sokwh = document.getElementById('1').value
+    let tiendien
+    bac1=1678;
+    bac2=1734;
+    bac3=2014;
+    bac4=2536;
+    bac5=2834;
+    bac6=2927;
+    if (sokwh>0){
+        if (sokwh<50){
+            tiendien = sokwh*bac1
+        }else if (sokwh<100){
+            tiendien = 50*bac1 + (sokwh-50)*bac2
+        }else if (sokwh<200){
+            tiendien = 50*bac1 + 50*bac2 + (sokwh-100)*bac3
+        }else if (sokwh<300){
+            tiendien = 50*bac1 + 50*bac2 + 100*bac3+(sokwh-200)*bac4
+        }else if (sokwh<=400){
+            tiendien = 50*bac1 + 50*bac2 + 100*bac3+100*bac4+(sokwh-300)*bac5
+        }else if(sokwh>400)
+            tiendien = 50*bac1 + 50*bac2 + 100*bac3+100*bac4+100*bac5+(sokwh-400)*bac6
+        }else {
+        alert('Số kWh Không Hợp Lệ')
+    }
+      let tienthue
+      tienthue = tiendien/10
+    document.getElementById('2').innerText = 'Thuế GTGT (10%) Tiền Điện : '+tienthue+' VND';
+    document.getElementById('3').innerText = 'Tiền Điện Của Bạn Là : '+tiendien+' VND';
+    let tongsotien = tienthue + tiendien
+      document.getElementById('4').innerText ='Tổng Tiền Phải Đóng : '+tongsotien+' VND'
+  }
+</script>
+</center>
+</body>
+</html>
